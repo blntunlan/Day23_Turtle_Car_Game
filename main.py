@@ -21,15 +21,6 @@ def main():
     cars = Car.create_random_cars(10)
     game.level()
 
-    def restart_game():
-        """Restart the game when 'r' key is pressed."""
-        if game.game_over:
-            game.clear()
-            game.sayac = 0
-            game.game_over = False
-            game.level()
-            kaplumba.start()
-
     # Listen for keyboard events
     screen.listen()
     screen.onkeypress(kaplumba.go_forward, 'Up')
